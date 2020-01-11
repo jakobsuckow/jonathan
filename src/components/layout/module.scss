@@ -1,6 +1,6 @@
 $socialMenuSize: 20em;
 $bg1: #000;
-$bg2: #ccc;
+$bg2: #121212;
 
 .global {
   background-color: $bg1;
@@ -22,7 +22,12 @@ $bg2: #ccc;
 
   span {
     width: 50%;
+    &:nth-child(2) {
+      text-align: right;
+    }
   }
+
+
 }
 
 .social {
@@ -32,14 +37,32 @@ $bg2: #ccc;
   background-color: $bg2;
   position: absolute;
   display: none;
+
+
+
+  ul {
+    position: relative;
+    margin-top: 8rem;
+    text-align: center;
+
+    
+  }
   li {
     display: inline-block;
+    padding: 0 4px;
+    transform: translateY(12rem);
   }
 }
+
 
 .social.open {
   display: inline-block;
   background-color: $bg2;
+  
+  li {
+    transform: translateY(0);
+  }
+
 }
 
 .body {
@@ -57,4 +80,21 @@ $bg2: #ccc;
 .menu.open {
     display: block;
     position: absolute;
+}
+
+
+.menu-items {
+  text-align: center;
+  vertical-align: middle;
+  a {
+    
+    font-size: 4em;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+}
+
+.click {
+  cursor: pointer;
 }

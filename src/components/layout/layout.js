@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
         </ul>
       </div>
       <div className={`menu ${isOpenMenu ? "open" : ""}`}>
+      <span className="click" onClick={closeMenu}>Close Menu</span>
         <div class="menu-items">
-          <span onClick={closeMenu}>Close Menu</span>
           <Link to="/">Home</Link>
           <Link to="/">Experience</Link>
           <Link to="/">Skils</Link>
@@ -39,16 +39,16 @@ const Layout = ({ children }) => {
       </div>
       <div className={`global ${isOpenSocial ? "open" : ""}`}>
         <div className="header">
-          <span className="burgerButton" onClick={menuTrigger}>
+          <span className="burgerButton click" onClick={menuTrigger}>
             button 1
           </span>
-          <span className="socialButton" onClick={socialTrigger}>
+          <span className="socialButton click" onClick={socialTrigger}>
             button 2
           </span>
         </div>
         <div>
           <div className="body">{children}</div>
-          <footer>
+          <footer className="centered">
             © {new Date().getFullYear()}, <p>Jonathan Moeller</p>
           </footer>
         </div>
