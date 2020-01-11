@@ -1,0 +1,50 @@
+$socialMenuSize: 10em;
+$bg1: #000;
+$bg2: #ccc;
+
+.global {
+    background-color: $bg1;
+    animation: 1s linear transform;
+}
+
+
+.global.open {
+    transform: translateY($socialMenuSize);
+    width: 95%;
+    margin: auto;
+    height: 100vh;
+
+}
+
+
+.menu {
+    display: flex;
+    background-color: $bg1;
+
+    span {
+        width: 50%;
+    }
+}
+
+
+
+.social {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg2;
+    position: absolute;
+    display: none;
+    li {
+        display: inline-block;
+        
+    }
+}  
+
+.social.open {
+    display: inline-block;
+}
+
+.body {
+    background-color: $bg1;
+}
